@@ -5,7 +5,8 @@
 
 //task 3
 
-//  let a= 3,b =4;
+//  let a= 3;
+//  let b =4;
 //
 // let c = a + b;
 // console.log(c);
@@ -31,7 +32,7 @@
 
 //task 5
 
-// let isAdult  = confirm('Skiko bulba po znyzhci ide, znajesh?');
+// let isAdult  = confirm('Are you older 18?');
 
 //task 6
 
@@ -50,7 +51,8 @@ function six()  {
     console.log(typeof (nuuuuull));
     console.log(typeof (undef));
 
-}
+};
+
 // six();
 
 //task 7
