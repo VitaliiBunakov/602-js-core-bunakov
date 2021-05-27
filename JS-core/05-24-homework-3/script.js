@@ -69,11 +69,64 @@ const arr1 = [2, 3, 4, 5];
 // console.log(xxx);
 
 //task  6
-function  findUnique(arr){
-
-}
+// function  findUnique(arr){
+//     for (let i = 0; i < arr.length-1; i++) {
+//         for (let x = i+1; x < arr.length; x++) {
+//             // console.log(arr[i]);
+//             // console.log(arr[x]);
+//             // console.log('=======');
+//             if (arr[i]== arr[x]){return false}
+//         }
+//     }
+//     return true;
+// }
+// console.log(findUnique([1,2, 3, 4, 4]));
 
 //task  7
+// function returnArrayLastNPositions(arr, n) {
+//     let arrToReturn = [];
+//
+//     function returnLastOne() {
+//         arrToReturn = arr[arr.length - 1];
+//     }
+//
+//     function returnLastN() {
+//         while (n > 0) {
+//             arrToReturn.push(arr[arr.length - n]);
+//             n--;
+//         }
+//
+//     }
+//
+//     if (n === undefined) {
+//         returnLastOne();
+//         return arrToReturn;
+//     } else {
+//         returnLastN();
+//         return arrToReturn;
+//
+//     }
+// }
+//
+// console.log(returnArrayLastNPositions([1, 2, 3, 4, 5, 6, 7, 8, 9], 5));
+// console.log(returnArrayLastNPositions([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
-//task  8
+//task  8   ***doesn't work temporary
+// function anyFirstLetterToUpper(str) {
+//     let s = str;
+//     for (let i = 0; i < str.length; i++) {
+//         if(i==0 || (str[i-1]==' ') || str[i-1]=='.' || str[i-1]==','){
+//             // str[i] = str[i].toUpperCase();
+//             s[i] = '*';
+//             console.log(s);
+//         }
+//
+//         continue;
+//     }
+//     return s;
+//     console.log(str);
+//
+//
+// }
+// anyFirstLetterToUpper('this is.the,string')
