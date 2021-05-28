@@ -61,26 +61,25 @@
 
 
 // // task 6----wtf
-const a = prompt('set a');
-console.log(typeof 5);
-if ((typeof a) != "number") {
-    console.log('Incorrect data');
-}
-const b = prompt('set b');
-if (typeof (b) !== 'number' || b <= 0) {
-    console.log('Incorrect data');
-}
-const c = prompt('set c');
-if (typeof c !== 'number' || c <= 0) {
-    console.log('Incorrect data');
-}
-let p, s, isRight;
-
-p = (a + b + c) / 2;
-s = (Math.sqrt(p * (p - a) * (p - b) * (p - c))).toFixed(3);
-isRight = (((a ** 2) + (b ** 2) == (c ** 2)) || ((a ** 2) + (c ** 2) == (b ** 2)) || ((b ** 2) + (c ** 2) == (a ** 2)));
-
-console.log(`Trianle with sigdhts ${a}, ${b}, ${c} have square ${s} an may be right - ${isRight}`)
+// const a = Number(prompt('set a'));
+// if ((typeof a) != "number" || a <= 0) {
+//     console.log('Incorrect data');
+// }
+// const b = +(prompt('set b'));
+// if (typeof (b) !== 'number' || b <= 0) {
+//     console.log('Incorrect data');
+// }
+// const c = +(prompt('set c'));
+// if (typeof c !== 'number' || c <= 0) {
+//     console.log('Incorrect data');
+// }
+// let p, s, isRight;
+//
+// p = (a + b + c) / 2;
+// s = (Math.sqrt(p * (p - a) * (p - b) * (p - c))).toFixed(3);
+// isRight = (((a ** 2) + (b ** 2) == (c ** 2)) || ((a ** 2) + (c ** 2) == (b ** 2)) || ((b ** 2) + (c ** 2) == (a ** 2)));
+//
+// console.log(`Triangle with sights ${a}, ${b}, ${c} have square ${s} an may be right - ${isRight}`)
 
 
 //task 7
