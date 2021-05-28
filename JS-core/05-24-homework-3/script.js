@@ -112,21 +112,23 @@ const arr1 = [2, 3, 4, 5];
 // console.log(returnArrayLastNPositions([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
-//task  8   ***doesn't work temporary
+//task  8
 // function anyFirstLetterToUpper(str) {
-//     let s = str;
+//     let s ;
 //     for (let i = 0; i < str.length; i++) {
-//         if(i==0 || (str[i-1]==' ') || str[i-1]=='.' || str[i-1]==','){
-//             // str[i] = str[i].toUpperCase();
-//             s[i] = '*';
-//             console.log(s);
+//         if((str[i-1]==' ') || str[i-1]=='.' || str[i-1]==','){
+//              s += str[i].toUpperCase();
+//         }else if (i==0  ){
+//             s= str[0].toUpperCase();
+//         }else{
+//             s+= str[i];
 //         }
 //
-//         continue;
 //     }
 //     return s;
-//     console.log(str);
+//
 //
 //
 // }
-// anyFirstLetterToUpper('this is.the,string')
+//
+// console.log(anyFirstLetterToUpper('this is.the,string'));
