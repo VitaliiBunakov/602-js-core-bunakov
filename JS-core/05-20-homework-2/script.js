@@ -60,7 +60,7 @@
 // }
 
 
-// // task 6----wtf
+// // task 6
 // const a = Number(prompt('set a'));
 // if ((typeof a) != "number" || a <= 0) {
 //     console.log('Incorrect data');
