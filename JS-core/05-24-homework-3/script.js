@@ -42,8 +42,10 @@ const arr1 = [2, 3, 4, 5];
 //     let c = a;
 //     for (let i=1; i< b; i++){
 //         c*=a;
+//
 //     }
 //     return c;
+//     //return a**b;
 // }
 // console.log(raiseToDegree(3, 2));
 // console.log(raiseToDegree(3, 3));
