@@ -74,15 +74,18 @@ const arr1 = [2, 3, 4, 5];
 // function  findUnique(arr){
 //     for (let i = 0; i < arr.length-1; i++) {
 //         for (let x = i+1; x < arr.length; x++) {
-//             // console.log(arr[i]);
-//             // console.log(arr[x]);
-//             // console.log('=======');
+//             console.log(arr[i]);
+//             console.log(arr[x]);
+//             console.log('=======');
 //             if (arr[i]== arr[x]){return false}
 //         }
 //     }
 //     return true;
 // }
 // console.log(findUnique([1,2, 3, 4, 4]));
+
+
+
 
 //task  7
 // function returnArrayLastNPositions(arr, n) {
@@ -115,22 +118,20 @@ const arr1 = [2, 3, 4, 5];
 
 
 //task  8
-// function anyFirstLetterToUpper(str) {
-//     let s ;
-//     for (let i = 0; i < str.length; i++) {
-//         if((str[i-1]==' ') || str[i-1]=='.' || str[i-1]==','){
-//              s += str[i].toUpperCase();
-//         }else if (i==0  ){
-//             s= str[0].toUpperCase();
-//         }else{
-//             s+= str[i];
-//         }
-//
-//     }
-//     return s;
-//
-//
-//
-// }
-//
-// console.log(anyFirstLetterToUpper('this is.the,string'));
+function anyFirstLetterToUpper(str) {
+    let s ;
+    for (let i = 0; i < str.length; i++) {
+        if((str[i-1]==' ') || str[i-1]=='.' || str[i-1]==','){
+             s += str[i].toUpperCase();
+        }else if (i==0  ){
+            s= str[0].toUpperCase();
+        }else{
+            s+= str[i];
+        }
+
+    }
+    return s;
+
+}
+
+console.log(anyFirstLetterToUpper('this is.the,string'));
