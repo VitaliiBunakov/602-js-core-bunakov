@@ -12,34 +12,34 @@
  Напишіть код, який використовує цю функцію та обробляє можливі виняткові ситуації.
  */
 
-// function calcRectangleArea(width, height) {
-//     if (isNaN(width)  || isNaN(height) ) {
-//         throw new Error('Width and height parameters can be only numbers.');
-//     } else if (width <= 0 || height <= 0) {
-//         throw new Error('Width or height are scalar, not vector,so must be positive ;) ')
-//     }
-//     return width * height;
-// }
-//
-// try {
-//     console.log(calcRectangleArea("dd", "gdfyhjtdy"));
-// } catch (error) {
-//     if (error.name === "Error") {
-//         console.log(('I got you! '))
-//         console.log(error.name);
-//         console.log(error.message);
-//         console.log(error.stack);
-//     } else {
-//
-//         console.log("Why did you do that??");
-//         console.log(error.name);
-//         console.log(error.message);
-//         console.log(error.stack);
-//     }
-//
-// } finally {
-//     console.log("its still alive!!")
-// }
+function calcRectangleArea(width, height) {
+    if (isNaN(width)  || isNaN(height) || typeof(width) === "boolean" || typeof(height) === "boolean") {
+        throw new Error('Width and height parameters can be only numbers.');
+    } else if (width <= 0 || height <= 0) {
+        throw new Error('Width or height are scalar, not vector,so must be positive ;) ')
+    }
+    return width * height;
+}
+
+try {
+    console.log(calcRectangleArea(4, "2"));
+} catch (error) {
+    if (error.name === "Error") {
+        console.log(('I got you! '))
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+    } else {
+
+        console.log("Why did you do that??");
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack);
+    }
+
+} finally {
+    console.log("its still alive!!")
+}
 
 
 //task 2
@@ -166,28 +166,28 @@
  * [ {id: 7}, {id: 44}, {id: 22} ]
  */
 
-
-function showUser(id){
-    if(id < 0){throw new Error('ID must be positive')};
-
-    return {id};
-}
-
-function showUsers(ids){
-    let usersIDCorrectArray = [];
-
-    try{
-        for (let key in ids){
-            usersIDCorrectArray.push(showUser(ids[key]));
-        }
-    }catch (err){
-        if(err.name === 'Error'){
-            console.log(err.name);
-            console.log(err.message);
-        }
-    }
-    return usersIDCorrectArray;
-}
-
-
-console.log(showUsers([7, 12, 44, 22]));
+//
+// function showUser(id){
+//     if(id < 0){throw new Error('ID must be positive')};
+//
+//     return {id};
+// }
+//
+// function showUsers(ids){
+//     let usersIDCorrectArray = [];
+//
+//     try{
+//         for (let key in ids){
+//             usersIDCorrectArray.push(showUser(ids[key]));
+//         }
+//     }catch (err){
+//         if(err.name === 'Error'){
+//             console.log(err.name);
+//             console.log(err.message);
+//         }
+//     }
+//     return usersIDCorrectArray;
+// }
+//
+//
+// console.log(showUsers([7, 12, 44, 22]));
