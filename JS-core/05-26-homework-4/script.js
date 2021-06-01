@@ -22,7 +22,9 @@
 // }
 //
 // try {
-//     console.log(calcRectangleArea(4, "2"));
+//     const res = try{
+//         calcRectangleArea(4, "2");
+//     }
 // } catch (error) {
 //     if (error.name === "Error") {
 //         console.log(('I got you! '))
@@ -166,28 +168,32 @@
  * [ {id: 7}, {id: 44}, {id: 22} ]
  */
 
-//
-// function showUser(id){
-//     if(id < 0){throw new Error('ID must be positive')};
-//
-//     return {id};
-// }
-//
-// function showUsers(ids){
-//     let usersIDCorrectArray = [];
-//
-//     try{
-//         for (let key in ids){
-//             usersIDCorrectArray.push(showUser(ids[key]));
-//         }
-//     }catch (err){
-//         if(err.name === 'Error'){
-//             console.log(err.name);
-//             console.log(err.message);
-//         }
-//     }
-//     return usersIDCorrectArray;
-// }
-//
-//
-// console.log(showUsers([7, 12, 44, 22]));
+
+function showUser(id) {
+    if (id < 0) {
+        throw new Error('ID must be positive')
+    }
+
+
+    return {id};
+}
+
+function showUsers(ids) {
+    let usersIDCorrectArray = [];
+
+
+    for (let i = 0; i < ids.length; i++) {
+        try {
+            usersIDCorrectArray.push(showUser(ids[i]));
+        } catch (err) {
+            console.log(err.name);
+            console.log(err.message);
+        }
+
+    }
+
+    return usersIDCorrectArray;
+}
+
+
+console.log(showUsers([7, -12, 44, -22]));
