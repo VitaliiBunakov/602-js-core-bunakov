@@ -13,7 +13,7 @@
  */
 
 // function calcRectangleArea(width, height) {
-//     if (typeof width !== "number" || typeof height !== "number") {
+//     if (isNaN(width)  || isNaN(height) ) {
 //         throw new Error('Width and height parameters can be only numbers.');
 //     } else if (width <= 0 || height <= 0) {
 //         throw new Error('Width or height are scalar, not vector,so must be positive ;) ')
