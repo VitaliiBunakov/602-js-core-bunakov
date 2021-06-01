@@ -169,31 +169,31 @@
  */
 
 
-function showUser(id) {
-    if (id < 0) {
-        throw new Error('ID must be positive')
-    }
-
-
-    return {id};
-}
-
-function showUsers(ids) {
-    let usersIDCorrectArray = [];
-
-
-    for (let i = 0; i < ids.length; i++) {
-        try {
-            usersIDCorrectArray.push(showUser(ids[i]));
-        } catch (err) {
-            console.log(err.name);
-            console.log(err.message);
-        }
-
-    }
-
-    return usersIDCorrectArray;
-}
-
-
-console.log(showUsers([7, -12, 44, -22]));
+// function showUser(id) {
+//     if (id < 0) {
+//         throw new Error('ID must be positive')
+//     }
+//
+//
+//     return {id};
+// }
+//
+// function showUsers(ids) {
+//     let usersIDCorrectArray = [];
+//
+//
+//     for (let i = 0; i < ids.length; i++) {
+//         try {
+//             usersIDCorrectArray.push(showUser(ids[i]));
+//         } catch (err) {
+//             console.log(err.name);
+//             console.log(err.message);
+//         }
+//
+//     }
+//
+//     return usersIDCorrectArray;
+// }
+//
+//
+// console.log(showUsers([7, -12, 44, -22]));
