@@ -166,19 +166,20 @@
  * [ {id: 7}, {id: 44}, {id: 22} ]
  */
 
-
+//validate single id
 function showUser(id){
     if(id < 0){throw new Error('ID must be positive')};
 
     return {id};
 }
 
+//validate  multiple ids be prev function
 function showUsers(ids){
-    let usersIDCorrectArray = [];
+    let usersIDCorrectArray = []; //output ids(array of objects)
 
     try{
         for (let key in ids){
-            usersIDCorrectArray.push(showUser(ids[key]));
+            usersIDCorrectArray.push(showUser(ids[key])); //chek id, if valid - put into array
         }
     }catch (err){
         if(err.name === 'Error'){
