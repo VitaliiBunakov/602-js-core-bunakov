@@ -18,7 +18,7 @@
 //     } else if (width <= 0 || height <= 0) {
 //         throw new Error('Width or height are scalar, not vector,so must be positive ;) ')
 //     }
-//     return width * height;
+//     return width * height;x
 // }
 //
 // try {
@@ -168,27 +168,27 @@
 
 //validate single id
 function showUser(id){
-    if(id < 0){throw new Error('ID must be positive')};
+    if(id < 0){throw new Error('ID must be positive')}
 
     return {id};
 }
 
 //validate  multiple ids be prev function
-function showUsers(ids){
-    let usersIDCorrectArray = []; //output ids(array of objects)
-
-    try{
-        for (let key in ids){
-            usersIDCorrectArray.push(showUser(ids[key])); //chek id, if valid - put into array
-        }
-    }catch (err){
-        if(err.name === 'Error'){
-            console.log(err.name);
-            console.log(err.message);
-        }
-    }
-    return usersIDCorrectArray;
-}
-
-
-console.log(showUsers([7, 12, 44, 22]));
+// function showUsers(ids){
+//     let usersIDCorrectArray = []; //output ids(array of objects)
+//
+//     try{
+//         for (let key in ids){
+//             usersIDCorrectArray.push(showUser(ids[key])); //chek id, if valid - put into array
+//         }
+//     }catch (err){
+//         if(err.name === 'Error'){
+//             console.log(err.name);
+//             console.log(err.message);
+//         }
+//     }
+//     return usersIDCorrectArray;
+// }
+//
+//
+// console.log(showUsers([7, -12, 44, 22]));
