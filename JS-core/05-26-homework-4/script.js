@@ -167,11 +167,11 @@
  */
 
 //validate single id
-function showUser(id){
-    if(id < 0){throw new Error('ID must be positive')}
-
-    return {id};
-}
+// function showUser(id){
+//     if(id < 0){throw new Error('ID must be positive')}
+//
+//     return {id};
+// }
 
 //validate  multiple ids be prev function
 // function showUsers(ids){
