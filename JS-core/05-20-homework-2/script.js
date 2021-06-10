@@ -83,17 +83,45 @@
 
 
 //task 7
-// const nowTime = new Date();
-// const nowHour = nowTime.getHours();
-// // const nowHour = 21;
-// console.log(nowHour);
-// if (nowHour<=5 || nowHour>=23){
+/**
+ * Написати умовну конструкцію, яка в залежності від часу доби виводитиме відповідне привітання.
+ * Потрібно отримати реальний час доби із системи. Зробити 2 способами через 2 різних умовних оператора.
+ В діапазоні годин 23-5 – має виводитися привітання “Доброї ночі”
+ В діапазоні годин 5-11 – має виводитися привітання “Доброго ранку”
+ В діапазоні годин 11-17 – має виводитися привітання “Доброго дня”
+ В діапазоні годин 17-23 – має виводитися привітання “Доброго вечора”.
+
+ */
+const nowTime = new Date();
+const nowHour = nowTime.getHours();
+// const nowHour = 21;
+console.log(nowHour);
+
+// if (nowHour <= 5 || nowHour >= 23) {
 //     console.log('Доброї ночі');
-// } else if (nowHour <= 11){
+// } else if (nowHour <= 11) {
 //     console.log('Доброго ранку');
-// }else if (nowHour <= 17){
+// } else if (nowHour <= 17) {
 //     console.log('Доброго дня');
-// }else if (nowHour <= 23){
+// } else if (nowHour <= 23) {
 //     console.log('Доброго вечора');
 // }
+
+switch (true) {
+    case (nowHour <= 5 || nowHour >= 23):
+        console.log('Доброї ночі');
+        break;
+    case (nowHour <= 11):
+        console.log('Доброго ранку');
+        break;
+    case (nowHour <= 17):
+        console.log('Доброго дня');
+        break;
+    case (nowHour <= 23):
+        console.log('Доброго вечора');
+        break;
+
+}
+
+
 
