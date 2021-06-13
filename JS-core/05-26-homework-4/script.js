@@ -13,16 +13,18 @@
  */
 
 // function calcRectangleArea(width, height) {
-//     if (typeof width !== "number" || typeof height !== "number") {
+//     if (isNaN(width)  || isNaN(height) || typeof(width) === "boolean" || typeof(height) === "boolean") {
 //         throw new Error('Width and height parameters can be only numbers.');
 //     } else if (width <= 0 || height <= 0) {
 //         throw new Error('Width or height are scalar, not vector,so must be positive ;) ')
 //     }
-//     return width * height;x
+//     return width * height;
 // }
 //
 // try {
-//     console.log(calcRectangleArea("dd", "gdfyhjtdy"));
+//     const res = try{
+//         calcRectangleArea(4, "2");
+//     }
 // } catch (error) {
 //     if (error.name === "Error") {
 //         console.log(('I got you! '))
@@ -166,29 +168,32 @@
  * [ {id: 7}, {id: 44}, {id: 22} ]
  */
 
-//validate single id
-// function showUser(id){
-//     if(id < 0){throw new Error('ID must be positive')}
+
+// function showUser(id) {
+//     if (id < 0) {
+//         throw new Error('ID must be positive')
+//     }
+//
 //
 //     return {id};
 // }
-
-//validate  multiple ids be prev function
-// function showUsers(ids){
-//     let usersIDCorrectArray = []; //output ids(array of objects)
 //
-//     try{
-//         for (let key in ids){
-//             usersIDCorrectArray.push(showUser(ids[key])); //chek id, if valid - put into array
-//         }
-//     }catch (err){
-//         if(err.name === 'Error'){
+// function showUsers(ids) {
+//     let usersIDCorrectArray = [];
+//
+//
+//     for (let i = 0; i < ids.length; i++) {
+//         try {
+//             usersIDCorrectArray.push(showUser(ids[i]));
+//         } catch (err) {
 //             console.log(err.name);
 //             console.log(err.message);
 //         }
+//
 //     }
+//
 //     return usersIDCorrectArray;
 // }
 //
 //
-// console.log(showUsers([7, -12, 44, 22]));
+// console.log(showUsers([7, -12, 44, -22]));
