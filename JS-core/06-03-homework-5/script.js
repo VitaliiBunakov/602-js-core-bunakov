@@ -23,8 +23,6 @@
 // console.log(propsCount({"key1": 1, "key2": 2, "key3": 3, "key4":4}));
 
 
-
-
 //task 2
 /**
  * Створіть довільний об’єкт, який має 5 полів. Необхідно написати функцію showProps(obj),
@@ -57,11 +55,8 @@
 // showProps(object1);
 
 
-
-
-
 //task 3
-
+/**
  * Створіть клас Person, в якого конструктор приймає параметри name і surname, а також міститься метод showFullName(),
  * який виводить ім’я і прізвище особи.
  *
@@ -79,25 +74,41 @@
  * console.log("Current course: " + stud1.showCourse()); //Current course: 6
 
  */
-class Person{
-    constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-
-    showFullName(){
-        return this.name + ' ' + this.surname;
-    }
-
-}
-class Student{
-    constructor() {
-        super( name, surname);
-    }
-}
-
-
-
+// class Person{
+//     constructor(name, surname) {
+//         this.name = name;
+//         this.surname = surname;
+//     }
+//
+//     showFullName(){
+//         return this.name + ' ' + this.surname;
+//     }
+//
+// }
+// class Student extends Person{
+//     constructor(name, surname, year) {
+//         super( name, surname);
+//         this.year = year;
+//     }
+//
+//     showFullName(midleName){
+//         this.midleName = midleName;
+//         return this.name + ' '+ midleName + ' ' + this.surname;
+//     }
+//
+//     showCourse(){
+//         let currYear = new Date().getFullYear()
+//         if((currYear - this.year) > 6){
+//             return "already got degree!"
+//         }
+//         return currYear - this.year
+//     }
+// }
+//
+// let stud1 = new Student("Petro", "Petrenko", 2015);
+//  console.log(stud1.showFullName("Petrovych")); // Petrenko Petro Petrovych
+//  console.log("Current course: " + stud1.showCourse()); //Current course: 6
+//
 
 
 //task 4
@@ -110,6 +121,7 @@ class Student{
  визначенні зарплати – створити метод showSalaryWithExperience(). Вивести значення зарплати з цим коефіцієнтом.
  3) додати гетери і сетери для поля experience. Встановити значення experience = 1.5 і вивести його на екран.
  4) Вивести значення зарплати з новим experience.
+
  5) Створити кілька екземплярів класу (працівників) з різними зарплатами. Посортувати зарплату працівників із
  найбільшим experience по зростанню і вивести результат в форматі:   worker_fullName: salary_value ………..
 
@@ -149,17 +161,73 @@ class Student{
 
  */
 
+class Worker {
+    constructor(fullName, dayRate, workingDays) {
+        this.fullName = fullName;
+        this.dayRate = dayRate;
+        this.workingDays = workingDays;
+    }
 
+    _experience = 1.2;
+
+    get showExp() {
+        return this._experience
+    };
+
+    set setExp(experience) {
+        this._experience = experience
+    };
+
+
+    showSalary() {
+        // console.log(this.dayRate * this.workingDays);
+        return this.dayRate * this.workingDays
+    };
+
+    showSalaryWithExperience() {
+        // console.log(this.showSalary() * this._experience);
+        return (this.showSalary() * this._experience);
+    }
+
+
+}
+
+let worker1 = new Worker("John Johnson", 20, 23);
+let worker2 = new Worker("Tom Tomson", 48, 23);
+let worker3 = new Worker("Andy Ander", 29, 23);
+let worker4 = new Worker("En Der", 15, 23);
+
+console.log(worker1.fullName);
+console.log(`${worker1.fullName}salary:  ${worker1.showSalary()}`);
+console.log("New experience: " + worker1.showExp);
+console.log(`${worker1.fullName}salary:  ${worker1.showSalaryWithExperience()}`);
+worker1.setExp = 1.5;
+console.log("New experience: " + worker1.showExp);
+console.log(`${worker1.fullName}salary:  ${worker1.showSalaryWithExperience()}`);
+
+/*СПЕЦІАЛЬНО виставив однакову кількість робочих днів - тоді наглядно, по  коефіцієнту,
+видно в кого більша зп*/
+let employeeList = [worker1, worker2, worker3,worker4];
+employeeList.sort((a, b) => {
+    return ( a.showSalaryWithExperience() > b.showSalaryWithExperience()) ? 1 : -1
+})
+console.log('Sorted salary:')
+for (let emp of employeeList) {
+    console.log(`${emp.fullName}: ${emp.showSalary()}`)
+}
 
 
 //task 5
 /**
  * Створіть батьківський клас GeometricFigure, який має порожній метод для визначення площі getArea() та
  * метод toString() для виведення назви класу.
+
  Створіть 3 класи нащадки Triangle, Square і Circle, які наслідуються від класу GeometricFigure.
+
  Кожен з дочірніх класів має свою реалізацію методу getArea(), для визначення площі фігури.
  В конструкторах дочірніх класів передбачити властивості необхідні для визначення площі фігури,
  наприклад для кола - радіус r.
+
  Створіть зовнішню функцію handleFigures(figures), яка прийматиме масив об’єктів дочірніх класів figures,
  перевірятиме чи об’єкт належить батьківському класу з урахуванням наслідування,
  виводитиме назву створеного об’єкту відповідної фігури, розраховану площу фігури та сумарну площу всіх фігур.
@@ -185,3 +253,83 @@ toString() {
 
 
  */
+//
+// class GeometricFigure {
+//     constructor() {
+//     }
+//
+//     getArea() {
+//     };
+//
+//     toString() {
+//         return Object.getPrototypeOf(this).constructor.name;
+//     }
+//
+// }
+//
+// class Triangle extends GeometricFigure {
+//     constructor(a, b, c) {
+//         super();
+//         this.a = a;
+//         this.b = b;
+//         this.c = c;
+//         super.toString();
+//     };
+//
+//
+//     getArea() {
+//         this.halfP = (this.a + this.b + this.c) / 2;
+//         return Math.sqrt(this.halfP * (this.halfP - this.a) * (this.halfP - this.b) * (this.halfP - this.c))
+//     };
+//
+// }
+//
+// class Square extends GeometricFigure {
+//     constructor(width, height) {
+//         super();
+//         this.width = width;
+//         this.height = height;
+//         super.toString();
+//     }
+//
+//     getArea() {
+//         return this.width * this.height
+//     };
+// }
+//
+// class Circle extends GeometricFigure {
+//     constructor(radius) {
+//         super();
+//         this.radius = radius;
+//         super.toString();
+//     }
+//
+//     const
+//     PI = 3.1415;
+//
+//     getArea() {
+//         return this.PI * (this.radius ** 2);
+//     };
+//
+//
+// }
+//
+// function handleFigures(figures) {
+//     let sumOfAllSquare = 0;
+//     for (let curfigure of figures) {
+//         sumOfAllSquare += curfigure.getArea();
+//         console.log(`GeometricFigure: ${curfigure}  - area: ${curfigure.getArea()}  `)
+//
+//     }
+// }
+//
+// console.log(`${sumOfAllSquare} // total area`);
+//
+// let triangle = new Triangle(3, 4, 5);
+// let square = new Square(2, 4);
+// let circle = new Circle(5);
+//
+// let figures = [triangle, square, circle];
+//
+// handleFigures(figures);
+
