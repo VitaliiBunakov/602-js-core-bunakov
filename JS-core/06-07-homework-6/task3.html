@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Article header</h2>
+<div id="text">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+</div>
+<p>Another text</p>
+
+
+<script>
+    const elementDiv = document.getElementById("text");
+    let elementsPList = elementDiv.querySelectorAll('p');
+
+    elementsPList.forEach((elem, index) => {
+        console.log(`Selector text ${index}: ${elem.innerText}`);
+
+    });
+</script>
+</body>
+</html>
