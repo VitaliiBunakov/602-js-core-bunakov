@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="input1" value="Text1">
+<input type="text" id="input2" value="Text2">
+
+
+<script>
+    const text1 = prompt('input text 1 ');
+    document.getElementById('input1').setAttribute('value', text1);
+    const text2 = prompt('input text 2 ');
+    document.getElementById('input2').setAttribute('value', text2);
+
+    const currentVal1 = document.getElementById('input1').getAttribute('value');
+    const currVal2 = document.getElementById('input2').getAttribute('value');
+
+    document.getElementById('input1').setAttribute('value', currVal2);
+    document.getElementById('input2').setAttribute('value', currentVal1);
+
+
+
+
+</script>
 
 </body>
 </html>
