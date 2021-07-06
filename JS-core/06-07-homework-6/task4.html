@@ -15,7 +15,8 @@
 
 <script>
     const listOfLi = document.getElementById('list').querySelectorAll('li');
-    // console.log(listOfLi);
+    const parentDiv = document.getElementById('list');
+    console.log(parentDiv);
 
     // alert(`
     // ${listOfLi[0].innerText}
@@ -26,8 +27,14 @@
     // `);
 
     alert(
-        ``
-    )
+        `
+        ${parentDiv.firstChild.innerText}
+        ${parentDiv.lastChild.innerText}
+        ${parentDiv.firstChild.nextSibling.innerText}
+        ${parentDiv.lastChild.previousSibling.innerText}
+        ${parentDiv.lastChild.previousSibling.previousSibling.innerText}
+        `
+    );
 </script>
 </body>
 </html>

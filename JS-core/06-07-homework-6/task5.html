@@ -5,6 +5,37 @@
     <title>Title</title>
 </head>
 <body>
+<h1>I'am a big header!!!</h1>
+<div id="myDiv">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+</div>
+<ul id="myList">
+    <li>Make</li>
+    <li>me</li>
+    <li>horizontal!</li>
+</ul>
+<span>Make me invisible, please!</span>
 
+
+<script>
+    document.getElementsByTagName('h1')[0].style.background = 'LightGreen';
+
+    let nodeListOf = document.getElementById('myDiv').querySelectorAll('p');
+    document.getElementById('myDiv').firstChild.nextSibling.style.fontWeight = '900';
+    nodeListOf[1].style.color = 'red';
+    nodeListOf[2].style.textDecoration = 'underline';
+    nodeListOf[3].style.fontStyle = "italic";
+
+    document.getElementById('myList').querySelectorAll('li').forEach((elem)=> {
+        elem.style.display= 'inline';
+    })
+
+    document.getElementsByTagName('span')[0].style.display = 'none';
+
+    // spann.style.display = "none";
+</script>
 </body>
 </html>
