@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+
+<button type="button" id="btn">BUttOn</button>
 <script>
 
     /**
@@ -13,6 +15,14 @@
      а при відведенні курсора миші виводитиме повідомлення "Mouse is not on me!".
 
      */
+
+    const elemBtn = document.getElementById('btn');
+
+    elemBtn.addEventListener('mouseover', ()=> {setTimeout( () => {alert('Mouse on me!')} , 1000)});
+
+    elemBtn.addEventListener('mouseleave', ()=> {setTimeout( ()=>{alert('Mouse is not on me!')} , 1000)}) ;
+    elemBtn.addEventListener('click', () => {alert('I was pressed!')});
+
 </script>
 </body>
 </html>

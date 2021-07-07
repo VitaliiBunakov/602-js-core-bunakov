@@ -5,11 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<div id="winSize"></div>
 <script>
     /**
      * Реалізуйте програму, яка відслідковуватиме зміну розміру (ширини і висоти) вікна браузера
      * і виводитиме на поточну сторінку при її розтязі/стисканні відповідні значення.
      */
+
+        function displayWindowSize(){
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+
+        document.getElementById("winSize").innerHTML = "Width: " + w + ", " + "Height: " + h;
+    }
+        window.addEventListener("resize", displayWindowSize);
+        displayWindowSize();
 </script>
 </body>
 </html>
