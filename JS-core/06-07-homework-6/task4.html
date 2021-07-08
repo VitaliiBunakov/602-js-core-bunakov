@@ -25,11 +25,13 @@
     // ${listOfLi[3].innerText}
     // ${listOfLi[2].innerText}
     // `);
-
+    const nodeListOf = parentDiv.querySelectorAll('li');
+    //why it doesnt work??????????
     alert(
         `
-        ${parentDiv.firstChild.innerText}
-        ${parentDiv.lastChild.innerText}
+
+        ${nodeListOf.firstChild}
+        ${parentDiv.lastChild.previousSibling.innerText}
         ${parentDiv.firstChild.nextSibling.innerText}
         ${parentDiv.lastChild.previousSibling.innerText}
         ${parentDiv.lastChild.previousSibling.previousSibling.innerText}

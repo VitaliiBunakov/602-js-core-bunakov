@@ -1,5 +1,5 @@
 let http =  require("http");
-let {sayHelloUser,task1,task2}  = require('./personalmodule');
+let {task1,task2}  = require('./personalmodule');
 let url = require('url');
 
 
