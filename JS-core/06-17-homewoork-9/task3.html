@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
 <h3>header1</h3>
@@ -15,6 +16,18 @@
      * Знайдіть теги <div>, які стоять безпосередньо після <h3> і перемістіть кожен <div>-елемент так,
      * щоб він став безпосередньо над <h3>.
      */
+
+     // $("h3").each(function( ) {
+     //    $(this).next().clone().insertBefore($(this));
+     //    $(this).next().remove();
+     // });
+
+    $('h3').each(function ()  {
+        $(this).next().insertBefore($(this))
+    })
+
+
+
 </script>
 
 

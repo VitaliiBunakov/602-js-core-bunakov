@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<input type="checkbox"  name="chkbx" id="1">
+<input type="checkbox"  name="chkbx" id="2">
+<input type="checkbox"  name="chkbx" id="3">
+<input type="checkbox"  name="chkbx" id="4">
+<input type="checkbox"  name="chkbx" id="5">
+<input type="checkbox"  name="chkbx" id="6">
 
 <script>
     /**
      * На HTML-сторінці є 6 чекбоксів. Напишіть скріпт, який після того, як користувач позначив будь-які 3 чекбокси,
      * всі чекбокси робить неактивними.
      */
+
+
+
+    var checker = 0;
+    $("input[type=checkbox]").on('change', function(){
+        checker = $( "input:checked" ).length;
+        if(checker >= 3){
+            $("input[type=checkbox]").prop('disabled', true);
+        }
+    } )
+
+
+
 </script>
 
 </body>

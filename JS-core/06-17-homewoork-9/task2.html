@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
 <h2 class="head">header1</h2>
@@ -17,6 +18,8 @@
      * Для заданої сторінки знайдіть всі <h2> з класом head, зробіть для них зелений колір фону,
      * потім серед знайдених елементів знайдіть елементи з класом inner і поставте їм розмір шрифту 35px.
      */
+
+   $("h2.head").css('background', 'green').find(".inner").css("fontSize","35px")
 
 </script>
 </body>

@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+
+
+<p></p>
+
+<a href="https://www.google.com">google</a>
 
 <script>
     /**
      * На HTML-сторінці є посилання <a>. У випадку коли, href починається на https://,
      * потрібно додати посиланню атрибут target="_blank".
      */
-</script>
+   if($("a").attr('href').startsWith('https://')){
+       $("a").attr('target','_blank')
+   }
 
+
+</script>
 
 </body>
 </html>
