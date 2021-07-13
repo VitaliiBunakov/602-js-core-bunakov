@@ -1,0 +1,1 @@
+module.exports.userValidMidlwar = require('./users/user.validate.midwar');

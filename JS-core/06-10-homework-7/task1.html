@@ -17,9 +17,26 @@
 
      */
 
-    const newWindow =window.open('http://google.com','newwindow',"width=300 height=300");
-    setTimeout(newWindow.resizeTo(x,y), 5000,500,500) ;
+    var newwindow = null;
 
+    test = function () {
+        newwindow = window.open("blank.html", 'name', 'height=300,width=300,top=300,left=100');
+        setTimeout(newwindow.window.resizeTo, 2000, 500, 500);
+        setTimeout(newwindow.window.moveTo, 2000, 200, 200);
+        setTimeout(newwindow.window.close, 2000);
+    }
+    test();
+
+
+    function move() {
+
+        newwindow.moveTo(200, 200);
+        newwindow.resizeTo(800, 800);
+
+    }
+
+
+    // setTimeout(newWinres,1000,500,500,newWindow);
 
 </script>
 
