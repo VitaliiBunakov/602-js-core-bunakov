@@ -8,7 +8,7 @@ userRouter.get('', userController.getAllUsers);
 userRouter.get('/:user_identifier', userController.getUser);
 
 userRouter.post('',userValidMidlwar, userController.createUser);
-userRouter.delete('', userController.deleteUser);
+userRouter.delete('/:user_identifier', userController.deleteUser);
 userRouter.put('', userController.updateUser);
 
 
