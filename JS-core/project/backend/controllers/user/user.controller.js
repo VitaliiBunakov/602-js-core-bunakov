@@ -91,12 +91,44 @@ module.exports = {
 
 
     updateUser: (req, res) => {
-        res.end('get user');
+        console.log("this method  is  not redy yet");
+        res.end("this method  is  not redy yet")
+
     },
 
 
     deleteUser: (req, res) => {
-        res.end('get user');
+        const user_identifier = req.params.user_identifier;
+        console.log( `Removing   user identified with ${user_identifier}`);
+        let sql = '';
+
+        switch (true) {
+            case (!isNaN(user_identifier)) :
+                sql = `DELETE FROM users where user_id = '${user_identifier}'`;
+                break;
+
+            case (user_identifier.includes('@')):
+                sql = `DELETE FROM users where email = '${user_identifier}'`;
+
+                break;
+
+            default:
+                sql = `DELETE
+                       FROM users
+                       where user_name = '${user_identifier}'`;
+
+                break;
+        }
+
+
+
+        mysql2Con.query(sql, (err, result) => {
+            if (err) {
+                console.log(err)
+            }
+            console.log(result);
+            res.json(result);
+        });
     },
 
 
