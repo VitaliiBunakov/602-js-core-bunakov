@@ -80,13 +80,11 @@ module.exports = {
         mysql2Con.query(sql, (err, result) => {
             if (err) {
                 console.log(err)
-            } else {
-                console.log(result)
             }
         })
 
 
-        res.end(' user created');
+        res.end(`User ${userName} created `);
     },
 
 
@@ -127,7 +125,7 @@ module.exports = {
                 console.log(err)
             }
             console.log(result);
-            res.json(result);
+            res.end(`User ${user_identifier} removed `);
         });
     },
 
