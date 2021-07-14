@@ -64,8 +64,8 @@ module.exports = {
 
     createUser: (req, res) => {
         const userName = req.body.name;
-        // const email = req.body.email; //prod version
-        const email = uuidv4(); // test version email
+        const email = req.body.email; //prod version
+        // const email = uuidv4(); // test version email
         const password = req.body.password;
         const adm_lvl = '1';
         const sql = `insert into users (user_name, user_pass, email, adm_lvl)
