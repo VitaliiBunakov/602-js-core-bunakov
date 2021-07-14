@@ -1,6 +1,9 @@
 const express = require('express');
 const expressBars = require('express-handlebars')
 const path = require('path');
+const db = require('./dataBase').getInstance();
+db.setModels();
+
 const PORT = 5000;
 const app = express();
 
